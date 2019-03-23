@@ -1,0 +1,25 @@
+
+                            Parallel Processing
+                                 CSCI 6330
+                                 Fall 2017
+
+turnin_code:  pp_p6
+
+
+Write a C program that uses  CUDA  on c00 to solve the hotplate problem.
+The new program should conform to the same command-line interface as p1.
+
+To run the program I will type commands like this one:
+
+    ./p6 500 600 100 100 100 400 0.01
+
+
+
+Use turnin to submit a tar file containing all of your project files,
+including a makefile that will build the executable program which MUST
+be named p6.  Note that I only type the simple command "make" below in
+order to have the program built.
+
+    rm -rf p6
+    rm -f  *.o
+    make
