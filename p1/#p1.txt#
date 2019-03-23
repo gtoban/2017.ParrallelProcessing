@@ -1,0 +1,62 @@
+
+                            Parallel Processing
+                                 CSCI 6330
+                                 Fall 2017
+
+
+turnin_code:  pp_p1
+
+
+The file named hotplate_problem.txt describes the hotplate problem.
+Write a sequential C program to solve the problem, meeting the criteria
+described below.  The algorithms in this program will form the basis
+for parallel programs later.
+
+To make sure that the corners are initialized in the same manner, we will
+initialize the rows and columns in this order:
+    entire top row (0)
+    entire left column (0)
+    entire right column (N-1)
+    entire bottom row (M-1)
+
+To run the program I will type commands like this one:
+
+    ./p1 500 600 100 100 100 400 0.01
+
+where the args are:
+
+    p1 num_rows num_cols top_temp left_temp right_temp bottom_temp epsilon
+
+Print current status (not the entire grid) on iterations that are a power of two.
+Also print the status on the last iteration even if it is not a power of two.
+This status should simply be the maximum difference of any single point of the grid
+between two successive iterations.  You will need to check the difference for every
+point to obtain the maximum one.
+
+For example, if we were to run this:
+
+    ./p1 500 500 0 100 100 100 0.1
+
+you would print something like this:  (note: the float values may not be exact here)
+
+     1  18.73747
+     2  9.368737
+     4  4.098823
+     8  2.289577
+    16  1.136604
+    32  0.568201
+    64  0.282805
+   128  0.141777
+
+   181  0.099995
+
+
+Use turnin to submit a tar file containing all of your project files,
+including a makefile that will build the executable program which MUST
+be named p1.
+
+To build the project, I will cd to my directory containing your files
+and simply type:
+
+    rm -rf p1 *.o
+    make
