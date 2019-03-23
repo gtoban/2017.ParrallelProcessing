@@ -1,0 +1,7 @@
+Depending on what you are doing, these may be useful:
+
+#ifdef __cplusplus
+#define EXTERNC extern "C"
+#else
+#define EXTERNC
+#endif
