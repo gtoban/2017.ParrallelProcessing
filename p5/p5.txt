@@ -1,0 +1,34 @@
+
+                            Parallel Processing
+                                 CSCI 6330
+                                 Fall 2017
+
+turnin_code:  pp_p5
+
+
+Write a C program that uses MPI to implement the same evalfunc
+functionality in which you used pthreads or openmp before.  Because MPI
+programs are executed via mpiexec, there will necessarily be a small
+change to the method in which programs are run.
+
+To run the program I will type commands like these:
+
+    mpiexec -n 16  ./p5
+    mpiexec -n 32  ./p5 N   ## where N is the number of solutions to find
+
+where the 16 and 32 represent the number of ranks to use.
+
+Rank 0 may act as a manager process here.  It can coordinate the
+activities of the other ranks if you find that useful.  For that reason,
+you may assume that the number of ranks specified will never be less
+than 2.  Rank 0 should also produce all printed output.
+
+
+Use turnin to submit a tar file containing all of your project files,
+including a makefile that will build the executable program which MUST
+be named p5.  Note that I only type the simple command "make" below in
+order to have the program built.
+
+    rm -rf p5
+    rm -f *.o
+    make

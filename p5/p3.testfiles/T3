@@ -1,0 +1,17 @@
+#!/bin/sh 
+
+
+export EVALFUNC_MAXNODEIDS=140
+
+export EVALFUNC_FAKEWORKTIME=0.12
+
+export EVALFUNC_ANSWERIDS=11,44,111,133
+
+
+echo RMB "------- stop with 2 solutions --------"
+
+/usr/bin/time -p  ./p5 1 2
+
+echo RMB "--------------------------------"
+
+/usr/bin/time -p  ./p5 4 2

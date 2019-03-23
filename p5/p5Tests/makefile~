@@ -1,0 +1,6 @@
+p5:  p5.cpp
+	g++ -o p5  p5.cpp evalfunc.o -lpthread
+
+clean:
+	rm -f p5 *.o
+

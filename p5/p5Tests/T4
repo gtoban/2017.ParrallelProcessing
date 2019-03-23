@@ -1,0 +1,19 @@
+#!/bin/sh 
+
+
+export EVALFUNC_MAXNODEIDS=1024
+
+export EVALFUNC_MAXNODEIDS=4096
+
+export EVALFUNC_FAKEWORKTIME=0.005
+
+export EVALFUNC_ANSWERIDS=11,444,777,1000
+
+echo RMB "--------  0.005 work time --------"
+echo
+
+/usr/bin/time -p  mpiexec -n 8 ./p5 9999
+
+echo RMB "--------------------------------"
+
+/usr/bin/time -p  mpiexec -n 16 ./p5 9999
