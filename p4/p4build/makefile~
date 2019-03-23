@@ -1,0 +1,6 @@
+p4:  p4.cpp
+	g++ -o p4  p4.cpp -lpthread
+
+clean:
+	rm -f p4 *.o
+
