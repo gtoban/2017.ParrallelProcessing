@@ -1,0 +1,30 @@
+
+                            Parallel Processing
+                                 CSCI 6330
+                                 Fall 2017
+
+turnin_code:  pp_p2
+
+
+Write a C program using pthreads to solve the hotplate problem.  The new
+program should conform to the same interface as p1 but will have one extra
+command-line argument, i.e. the number of threads to use.
+
+To run the program I will type commands like this one:
+
+    ./p2 500 600 100 100 100 400 0.01 8
+
+where the new value 8 represents the number of threads to work on the problem.
+
+All threads should participate in the work, and the original thread should be
+the one that produces the printed output.
+
+
+Use turnin to submit a tar file containing all of your project files,
+including a makefile that will build the executable program which MUST
+be named p2.  Note that I only type the simple command "make" below in
+order to have the program built.
+
+    rm -rf p2
+    rm -f *.o
+    make
